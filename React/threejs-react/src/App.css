@@ -37,7 +37,7 @@
   }
 }
 
-/* temporary */
+/* Shoe */
 html,
 body,
 #root {
@@ -79,4 +79,13 @@ body {
   left: 70px;
   width: 90px !important;
   height: 90px !important;
+}
+
+/* Iphone 13 */
+.canvas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 500px;
 }

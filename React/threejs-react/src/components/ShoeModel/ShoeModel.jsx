@@ -3,7 +3,7 @@ import { useFrame } from "@react-three/fiber";
 import { useRef, useState } from "react";
 import { useSnapshot } from "valtio";
 
-function Shoe(props) {
+function ShoeModel(props) {
   const shoeRef = useRef();
   const snap = useSnapshot(props.state);
   const { nodes, materials } = useGLTF("./shoe.gltf");
@@ -15,7 +15,9 @@ function Shoe(props) {
     shoeRef.current.rotation.y = Math.sin(t / 4) / 8;
     shoeRef.current.rotation.y = (1 + Math.sin(t / 1.5)) / 10;
   }, []);
+
   const [hovered, setHovered] = useState(null);
+
   return (
     <group
       ref={shoeRef}
@@ -94,4 +96,4 @@ function Shoe(props) {
   );
 }
 
-export default Shoe;
+export default ShoeModel;
